@@ -18,6 +18,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 nav {
@@ -51,6 +52,7 @@ nav ul li a {
     padding: 100px 20px;
     background: linear-gradient(to right, #6a11cb, #2575fc);
     color: white;
+    width: 100%;
 }
 
 .cta-button {
