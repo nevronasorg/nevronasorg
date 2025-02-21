@@ -6,76 +6,59 @@
     <title>Nevronas - AI Innovation</title>
     <link rel="stylesheet" href="styles.css">
     <script defer>
-        // Smooth scrolling function
-        function smoothScroll(targetId) {
-            const target = document.getElementById(targetId);
-            window.scrollTo({
-                top: target.offsetTop - 60, // Adjusted for fixed header
-                behavior: 'smooth'
+        // Function to handle the navigation between sections
+        function showSection(section) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
             });
+
+            // Show the selected section
+            document.getElementById(section).style.display = 'block';
         }
 
         // Initialize the page by showing the home section by default
         window.onload = function() {
-            document.getElementById('home').scrollIntoView();
+            showSection('home');
         };
     </script>
 </head>
 <body>
     <header>
-        <div class="logo">Nevronas</div>
         <nav>
+            <div class="logo">Nevronas</div>
             <ul>
-                <li><a href="javascript:void(0)" onclick="smoothScroll('home')">Home</a></li>
-                <li><a href="javascript:void(0)" onclick="smoothScroll('about')">About</a></li>
-                <li><a href="javascript:void(0)" onclick="smoothScroll('contact')">Contact</a></li>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Home Section -->
-        <section id="home" class="section hero">
-            <h1>Welcome to Nevronas</h1>
-            <p>Revolutionizing AI for a smarter tomorrow.</p>
-            <a href="javascript:void(0)" class="cta-button" onclick="smoothScroll('about')">Learn More</a>
+        <section id="home" class="section">
+            <div class="hero">
+                <h1>Welcome to Nevronas</h1>
+                <p>Revolutionizing AI for a smarter tomorrow.</p>
+                <a href="#" class="cta-button" onclick="showSection('about')">Learn More</a>
+            </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="section" style="background-color: #f4f4f4;">
+        <section id="about" class="section" style="display:none;">
             <h2>About Nevronas</h2>
             <p>We provide innovative AI solutions tailored to meet the needs of today’s technology-driven world.</p>
-            <div class="dummy-content">
-                <h3>Our Vision</h3>
-                <p>Empowering industries with intelligent solutions for a brighter future.</p>
-                <h3>Our Technology</h3>
-                <p>Utilizing machine learning, neural networks, and data analytics to drive innovation.</p>
-            </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section" style="background-color: #e6e6e6;">
+        <section id="contact" class="section" style="display:none;">
             <h2>Contact Us</h2>
-            <p>Get in touch for inquiries or collaborations!</p>
+            <p>Reach out to us for any inquiries or collaboration opportunities!</p>
             <p>Email: contact@nevronas.com</p>
-            <div class="dummy-content">
-                <h3>Our Office</h3>
-                <p>Visit us at 123 AI Avenue, Innovators City.</p>
-                <h3>Social Media</h3>
-                <p>Follow us on Twitter, LinkedIn, and Facebook.</p>
-            </div>
         </section>
 
-        <!-- Features Section -->
-        <section class="section features" style="background-color: #2b2b2b; color: white;">
+        <section class="features">
             <h2>Why Choose Nevronas?</h2>
             <p>Leading AI solutions with cutting-edge technology.</p>
-            <div class="dummy-content">
-                <h3>AI-powered Solutions</h3>
-                <p>Our solutions leverage AI to enhance business processes and innovation.</p>
-                <h3>Customizable Services</h3>
-                <p>We offer tailored AI systems to meet unique business needs.</p>
-            </div>
         </section>
     </main>
 
