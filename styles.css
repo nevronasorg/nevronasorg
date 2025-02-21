@@ -18,6 +18,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -55,6 +61,35 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Section Styles */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.features {
+    background-color: #e6e6e6;
+}
+
+.dummy-content {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dummy-content h3 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.dummy-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -67,3 +102,25 @@ footer {
     width: 100%;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5em;
+    }
+
+    nav .logo {
+        font-size: 1.2em;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+    }
+}
