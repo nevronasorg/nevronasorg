@@ -24,7 +24,7 @@
             -webkit-text-fill-color: transparent;
         }
         .hero-gradient {
-            background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(139,92,246,0.2));
+            background: linear-gradient(135deg, rgba(245, 227, 0, 0.2), rgba(0, 200, 83, 0.2), rgba(1, 101, 200, 0.2));
         }
         .product-dropdown {
             display: none;
@@ -39,6 +39,18 @@
             transform: scale(1.05);
             box-shadow: 0 10px 25px rgba(139,92,246,0.2);
         }
+        .video-container {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
     </style>
 </head>
 <body class="antialiased">
@@ -48,9 +60,9 @@
             <div class="container mx-auto flex justify-between items-center">
                 <div class="flex items-center">
                     <!-- Replace this with your actual logo -->
-                    <img src="logo2.png" alt="Nevronas Logo" class="w-10 h-10 mr-3 rounded-full">
+                    <img src="images/logo.png" alt="Nevronas Logo" width="80" height="80">
                     <div class="flex items-center">
-                        <span class="text-2xl font-bold logo">Nevronas</span>
+                        <span class="text-2xl font-bold logo"></span>
                     </div>
                 </div>
                 <div class="space-x-6 relative">
@@ -94,7 +106,12 @@
                 </div>
             </div>
             <div class="hero-gradient rounded-2xl p-6 flex items-center justify-center">
-                <div class="w-full h-96 bg-gray-800 rounded-xl opacity-80"></div>
+                <div class="w-100 h-90 bg-gray-800 rounded-xl opacity-100">
+                    <video autoplay loop muted playsinline>
+                        <source src="videos/intro.mp4" type="video/mp4 ">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </main>
 
@@ -119,12 +136,12 @@
                 <div class="bg-gray-800 rounded-2xl p-8 product-card">
                     <h3 class="text-3xl font-bold mb-4 gradient-text">CrisisBots</h3>
                     <p class="text-gray-300 mb-6">
-                        An intelligent swarm of AI-powered robotic units designed for rapid deployment in complex crisis environments, providing real-time reconnaissance and emergency support.
+                        A powerful swarm of AI-driven cyber defense units, designed for rapid deployment in digital crisis environments. CrisisBots specialize in real-time threat detection, secure communication, and system integrity audits, ensuring swift recovery from cyber incidents.
                     </p>
                     <ul class="space-y-3 text-gray-400 mb-6">
-                        <li>✓ Autonomous Navigation</li>
-                        <li>✓ Multi-Terrain Capabilities</li>
-                        <li>✓ Advanced Sensor Networks</li>
+                        <li>✓ Advanced Threat Intelligence</li>
+                        <li>✓ Timely Crisis Communication AI</li>
+                        <li>✓ AI Driven Cybersecurity Auditing</li>
                     </ul>
                     <a href="#" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">
                         Learn More
@@ -161,38 +178,38 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bot-card rounded-2xl p-6 text-center">
                     <div class="mb-6">
-                        <img src="placeholder-scout-bot.png" alt="Scout Bot" class="mx-auto rounded-full w-48 h-48 object-cover">
+                        <img src="images/CrisisManagementBot.webp" alt="CrisisManagementBot" class="mx-auto rounded-full w-48 h-48 object-cover">
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 gradient-text">Scout Bot</h3>
-                    <p class="text-gray-300 mb-4">Reconnaissance specialist with advanced terrain navigation and sensor arrays.</p>
+                    <h3 class="text-2xl font-bold mb-3 gradient-text">Crisis Management Bot</h3>
+                    <p class="text-gray-300 mb-4">Your Digital Crisis Coordinator. Identifies relevant cyber threats, data breaches, and alerts you in real-time.</p>
                     <ul class="text-gray-400 space-y-2 mb-6">
-                        <li>🔍 Terrain Mapping</li>
-                        <li>📡 Real-time Data Transmission</li>
-                        <li>🌐 Multi-environment Adaptability</li>
+                        <li>🚑 Real-time Threat Analysis</li>
+                        <li>💪 Crisis Mitigation</li>
+                        <li>🛟 Risk Management</li>
                     </ul>
                 </div>
                 <div class="bot-card rounded-2xl p-6 text-center">
                     <div class="mb-6">
-                        <img src="placeholder-rescue-bot.png" alt="Rescue Bot" class="mx-auto rounded-full w-48 h-48 object-cover">
+                        <img src="images/CommunicationCrisisBot.webp" alt="CommunicationCrisisBot" class="mx-auto rounded-full w-48 h-48 object-cover">
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 gradient-text">Rescue Bot</h3>
-                    <p class="text-gray-300 mb-4">Emergency response unit with medical support and extraction capabilities.</p>
+                    <h3 class="text-2xl font-bold mb-3 gradient-text">Communication Crisis Bot</h3>
+                    <p class="text-gray-300 mb-4">Your AI-Powered Cyber Crisis Communicator. Handles PR, internal messaging, and stakeholder trust during cyber incidents.</p>
                     <ul class="text-gray-400 space-y-2 mb-6">
-                        <li>🚑 Medical Assistance</li>
-                        <li>💪 Heavy Lifting</li>
-                        <li>🛟 Rapid Extraction</li>
+                        <li>🚑 Incident Messaging</li>
+                        <li>💪 Reputation Management</li>
+                        <li>🛟 Crisis Negotiation</li>
                     </ul>
                 </div>
                 <div class="bot-card rounded-2xl p-6 text-center">
                     <div class="mb-6">
-                        <img src="placeholder-command-bot.png" alt="Command Bot" class="mx-auto rounded-full w-48 h-48 object-cover">
+                        <img src="images/AuditorBot.webp" alt="AuditorBot" class="mx-auto rounded-full w-48 h-48 object-cover">
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 gradient-text">Command Bot</h3>
-                    <p class="text-gray-300 mb-4">AI-powered coordination unit for strategic crisis management and decision support.</p>
+                    <h3 class="text-2xl font-bold mb-3 gradient-text">Auditor Bot</h3>
+                    <p class="text-gray-300 mb-4">Your Cyber Security Compliance & Risk Analyst. Ensures systems meet security regulations and prevent vulnerabilities.</p>
                     <ul class="text-gray-400 space-y-2 mb-6">
-                        <li>🧠 Strategic Analysis</li>
-                        <li>📊 Real-time Modeling</li>
-                        <li>🌐 Global Communication</li>
+                        <li>🚑 Security Audits</li>
+                        <li>💪 Threat Analysis</li>
+                        <li>🛟 Regulatory Compliance</li>
                     </ul>
                 </div>
             </div>
@@ -204,12 +221,13 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="pricing-card bg-gray-800 rounded-2xl p-8 text-center">
                     <h3 class="text-2xl font-bold mb-4 gradient-text">Starter</h3>
-                    <p class="text-4xl font-bold mb-6">$99 <span class="text-base">/month</span></p>
+                    <p class="text-4xl font-bold mb-6">Free</p>
                     <ul class="space-y-4 mb-8 text-gray-400">
-                        <li>1 CrisisForge License</li>
-                        <li>2 CrisisBots</li>
+                        <li>Starter CrisisForge License</li>
+                        <li>1 CrisisBot</li>
                         <li>Basic Analytics</li>
                         <li>Email Support</li>
+                        <li>-</li>
                     </ul>
                     <a href="#" class="block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">
                         Get Started
@@ -219,11 +237,11 @@
                     <h3 class="text-2xl font-bold mb-4 gradient-text">Professional</h3>
                     <p class="text-4xl font-bold mb-6">$299 <span class="text-base">/month</span></p>
                     <ul class="space-y-4 mb-8 text-gray-400">
-                        <li>3 CrisisForge Licenses</li>
-                        <li>5 CrisisBots</li>
+                        <li>Professional CrisisForge License</li>
+                        <li>3 CrisisBots</li>
+                        <li>Dynamic Crisis Simulation</li>
                         <li>Advanced Analytics</li>
                         <li>Priority Support</li>
-                        <li>Custom Integrations</li>
                     </ul>
                     <a href="#" class="block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">
                         Choose Professional
@@ -233,11 +251,11 @@
                     <h3 class="text-2xl font-bold mb-4 gradient-text">Enterprise</h3>
                     <p class="text-4xl font-bold mb-6">Contact Us</p>
                     <ul class="space-y-4 mb-8 text-gray-400">
-                        <li>Unlimited CrisisForge Licenses</li>
-                        <li>Unlimited CrisisBots</li>
-                        <li>Full Custom Solution</li>
+                        <li>Enterprise CrisisForge License</li>
+                        <li>All Latest CrisisBots</li>
+                        <li>API access</li>
                         <li>24/7 Dedicated Support</li>
-                        <li>Tailored Deployment</li>
+                        <li>Private Deployment</li>
                     </ul>
                     <a href="#" class="block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">
                         Contact Sales
@@ -279,14 +297,12 @@
                         <h4 class="text-lg font-bold mb-4">Company</h4>
                         <ul class="space-y-2 text-gray-400">
                             <li><a href="#about" class="hover:text-white">About Us</a></li>
-                            <li><a href="#" class="hover:text-white">Careers</a></li>
-                            <li><a href="#" class="hover:text-white">Press</a></li>
+                            <li><a href="#" class="hover:text-white">Blog</a></li>
                         </ul>
                     </div>
                     <div>
                         <h4 class="text-lg font-bold mb-4">Connect</h4>
                         <div class="flex space-x-4 text-2xl">
-                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
                             <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
                             <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
                             <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
